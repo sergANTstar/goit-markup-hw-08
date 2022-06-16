@@ -15,9 +15,7 @@
 .header-block{
     @include centeredFlex (inline-flex);
     width: 450px;
-    justify-content: space-between ;
     }
-    
 
 .header-block__site-nav{
     @media screen and (max-width: 480px) {

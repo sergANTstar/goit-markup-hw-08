@@ -9,6 +9,7 @@
 
 .mobail-buton-menue {
     display: block;
+    margin-left: 276px;
     width: 40px;
     height: 40px;
     border: none;
@@ -111,12 +112,12 @@ z-index: 2;
 
 .mobile-social-networks__item {
     &:not(:last-child) {
-        margin-right: 10px;
+        padding-right: 10px;
         border-right: 1px solid 
         rgba(33, 33, 33, 0.2);
     }
     &:not(:first-child){
-        margin-left: 10px;
+        padding-left: 10px;
     }
 }
 
