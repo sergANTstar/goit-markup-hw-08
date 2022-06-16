@@ -1013,7 +1013,7 @@ address {
   line-height: 1.71;
 }
 
-@media screen and ((max-width: 1200px)) {
+@media screen and (max-width: 1200px) {
   .we-doing {
     display: none;
   }
@@ -1585,10 +1585,24 @@ address {
           transform: translateY(-11);
   -webkit-transform: translateX(-6px);
           transform: translateX(-6px);
+  cursor: pointer;
 }
 
 .mobail-buton-menue__icon--close {
   display: none;
+  fill: currentColor;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-delay: 250ms;
+          transition-delay: 250ms;
+}
+
+.mobail-buton-menue__icon--close:hover, .mobail-buton-menue__icon--close:focus {
+  fill: #2196F3;
 }
 
 .mobail-buton-menue.is-open .mobail-buton-menue__icon--close {

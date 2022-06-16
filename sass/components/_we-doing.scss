@@ -3,7 +3,7 @@
 
 
 .we-doing {
-    @media screen and ((max-width: 1200px)) {
+    @media screen and (max-width: 1200px) {
        display: none;
     }
 }
@@ -22,7 +22,7 @@
 
 .we-doing__item{
     
-    &:not(:last-child){
+    &:not(:last-child) {
         margin-right: 30px;
     }
 }
