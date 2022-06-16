@@ -1,0 +1,126 @@
+@import "../untils/mixin";
+@import "../untils/vars";
+
+.header-block {
+    position: relative;
+    
+}
+
+
+.mobail-buton-menue {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    fill: $main-text-color;
+    z-index: 1;
+    color: $main-text-color;
+    @media screen and (min-width: 481px) {
+        display:none;
+    }
+}
+
+.mobail-buton-menue__icon {
+    transform: translateY(-11);
+    transform: translateX(-6px);
+}
+
+.mobail-buton-menue__icon--close {
+    display: none;
+}
+
+.mobail-buton-menue.is-open .mobail-buton-menue__icon--close {
+display: block;
+z-index: 2;
+}
+
+.mobail-buton-menue.is-open .mobail-buton-menue__icon--menu {
+    display: none;
+    }
+
+.mobile-container{
+    width: 480px;
+    padding-right: 40px;
+    padding-left: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mobile-site-nav {
+    display: none;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    transform: translateY(-80px);
+    position: absolute;
+    background-color: $backround-color;
+    top: 100%;
+    left: 0;
+   width: 100%;
+    &.is-open {
+        display: block;
+    }
+    font-weight: 500;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: $main-text-color;
+
+
+}
+
+.mobile-site-nav__item {
+    font-size: 40px;
+
+    &:not(:last-child) {
+        margin-bottom: 32px;
+    }
+}
+
+.mobile-site-nav__link--main {
+    color: $accent-color;
+}
+.mobile-site-nav__link {
+    color: $main-text-color;
+}
+
+
+.mobail-header-block__contacts{
+    margin-top: 306px;
+}
+
+.mobile-header-block__contacts--item {
+    &:not(:first-child) {margin-top: 32px;
+}
+}
+
+.mobile-header-block__contacts--phone {
+    color: $accent-color;
+    font-size: 34px;
+}
+
+.mobile-header-block__contacts--mail {
+   
+    color: $second-text-color;
+    font-size: 24px;
+}
+
+.mobile-social-networks {
+    display: inline-flex;
+    margin-top: 64px;
+}
+
+.mobile-social-networks__item {
+    &:not(:last-child) {
+        margin-right: 10px;
+        border-right: 1px solid 
+        rgba(33, 33, 33, 0.2);
+    }
+    &:not(:first-child){
+        margin-left: 10px;
+    }
+}
+
+.mobile-social-networks__item--text{
+    color: $accent-color;
+    font-size: 18px;
+}

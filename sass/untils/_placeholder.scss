@@ -1,0 +1,67 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, p, a {
+    margin: 0;
+    padding: 0;
+}
+
+.list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+body{
+  padding-top: 80px;
+  background-color: $backround-color;
+  color: $main-text-color;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size:14px ;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+}
+
+.container{
+  width: 480px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+.order-form__field input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.order-form__field--checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+address {font-style: normal;}

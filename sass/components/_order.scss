@@ -1,0 +1,295 @@
+@import "../untils/mixin";
+@import "../untils/vars";
+
+.hero-order {
+    @include centeredFlex (flex, center);
+    margin-top: 30px;
+    min-width: 200px;
+    height: 50px;
+}
+
+.hero-order__button {
+    padding: 10px 32px;
+    border: none;
+    border-radius: 4px;
+    min-block-size: 200;
+    height: 50px;
+    cursor: pointer;
+    color: $backround-color;
+    background-color: $accent-color;
+
+    font-weight: 700;
+    font-size:16px;
+    line-height: 1.89;
+    letter-spacing: 0.03em;
+    text-align: center;
+    letter-spacing: 0.06em;
+ }
+
+ .hero-order__backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 250ms;
+    z-index: 2;
+}
+
+.hero-order__backdrop.hero-order__hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.hero-order__modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 0;
+
+    height: 581px;
+    width: 528px;
+    border-radius: 4px;
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2),
+    0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12); ;
+
+    background-color: $backround-color;
+}
+
+.hero-order__modal--close {
+    @include centeredFlex (flex, center);
+    flex-wrap: wrap;
+    position: absolute;
+    top:8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: transparent;
+    background-size: contain;
+    padding: 0;
+    margin: 0;
+    fill: $main-text-color;
+
+    transition-property:  fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 250ms;
+
+    &:focus, &:hover {
+        fill: $accent-color;
+        
+    }
+}
+
+.order-form {
+    @include centeredFlex;
+    flex-direction: column;
+    padding: 40px;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size:12px ;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.order-form__headline {
+    color: $main-text-color;
+
+    font-weight: 700;
+    font-size:20px ;
+    letter-spacing: 0.03em;
+    text-align: center;
+} 
+
+.order-form__field {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    color: $second-text-color;
+
+    &:first-child {
+        margin-top: 0px;    
+    }
+    
+    &:last-child {
+        margin-top: 20px;    
+    }
+    
+    label {
+        margin-bottom: 4px;
+    }
+    
+    &:last-child label {
+        margin-bottom: 0px;
+    }
+
+    &:not(:last-child) input {
+        width: 448px;
+        padding-left: 42px;
+        outline: 1px solid rgba(33, 33, 33, 0.2);
+        border: none;
+        border-radius: 4px;
+        height: 40px;
+        font-size: 14px;
+        color: $main-text-color;
+        cursor: pointer;
+        position: relative;
+    
+        transition-property: outline;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-delay: 250ms;
+    }
+    
+    &:hover:not(:last-child) input,
+    &:hover textarea,
+    &:focus:not(:last-child) input,
+    &:focus textarea {
+        outline: 1px solid $accent-color;
+        
+    }
+    
+    &:hover input ~ .order-form__field--icon,
+    &:focus input ~ .order-form__field--icon {
+        fill: $accent-color;
+    }
+    textarea {
+        width: 448px;
+        outline: 1px solid rgba(33, 33, 33, 0.2);
+        border: none;
+        border-radius: 4px;
+        color: $main-text-color;
+        height: 120px;
+        cursor: pointer; 
+        font-size: 14px;
+    
+        transition-property: outline;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-delay: 250ms;
+    }
+        
+    textarea::placeholder {
+        color: rgba(117, 117, 117, 0.5);    
+        font-size: 12px;
+    }
+}
+
+.order-form__js {
+    margin-top: 12px;
+    margin-bottom: 30px;
+}
+
+.order-form__field--comments {
+    padding: 12px 16px;
+}
+
+.order-form__field--agreement {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    margin: 0;
+    margin-right: 9px;
+
+}
+
+.order-form__field--input {
+    color: $main-text-color;
+    position: relative;
+}
+
+
+.order-form__field--treaty {
+    color: $accent-color;
+    text-decoration: underline;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+.order-form__field--icon {
+    position: absolute;
+    transform: translateY(calc(20px + 50%));
+    margin-left: 12px;
+    cursor: pointer;
+    fill: $main-text-color;
+
+    transition-property:  fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 250ms;
+ }
+
+
+
+.order-form__field--label {
+    @include centeredFlex (flex, center);
+    cursor: pointer;
+}
+
+
+.order-form__field--checkbox {
+    @include centeredFlex;
+    cursor: pointer;
+}
+
+.order-form__field--check:checked + .order-form__field--check-icon {
+fill: $accent-color;
+outline: 0px;
+background-size: contain;
+
+}
+
+
+.order-form__field--check-icon{
+    fill: none;
+    margin-left: 12px;
+    margin-right: 8px;
+    outline: 2px solid $main-text-color;
+    outline-offset: -2px;
+    border-radius: 2px;
+    background-origin: padding-box;
+    background-size: contain;
+
+    transition-property:  fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 250ms;  
+    
+}
+
+.order-form__submit {
+    @include centeredFlex (flex, center);
+    cursor: pointer;
+    
+}
+.order-form__submit--button {
+    width: 200px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: $accent-color;
+    color: $backround-color;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    border: 0;
+    cursor: pointer;
+    
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size:16px ;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    text-align: center;
+
+}

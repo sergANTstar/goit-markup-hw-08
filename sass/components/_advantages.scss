@@ -1,0 +1,97 @@
+@import "../untils/mixin";
+@import "../untils/vars";
+
+
+
+.advantages{
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+}
+
+.advantages-block {
+
+    @media screen and (min-width: 768px) {
+       display: flex; 
+       flex-wrap: wrap;
+    }
+}
+.advantages__item {
+    width: 450px;
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+   
+
+    @media screen and (min-width: 768px) {
+        width: 354px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+
+        &:nth-child(2n) {
+            margin-right: 0px;
+        }
+        
+        &:nth-last-child(-n+2) {
+            margin-bottom: 0px;
+        }
+    }
+    @media screen and (min-width: 1200px) {
+        width: 270px;
+        
+        &:not(:last-child) {
+            margin-right: 30px;
+            margin-bottom: 0px;
+        }
+    }
+}
+
+.advantages__icon {
+    @include centeredFlex (flex, center);
+    flex-wrap: wrap;
+    width: 450px;
+    height: 120px;
+    background-color: rgba(245, 244, 250, 1) ;
+    border-radius: 4px;
+
+     @media screen and (min-width: 768px) {
+        width: 354px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+
+        &:nth-child(2n) {
+            margin-right: 0px;
+        }
+        
+        &:nth-last-child(-n+2) {
+            margin-bottom: 0px;
+        }
+    }
+    @media screen and (min-width: 1200px) {
+        width: 270px;
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+}
+}
+
+.advantages__headline {
+    font-size:14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+.advantages__title {
+    margin-top: 10px;
+
+    color: $second-text-color;
+    line-height: 1.71;
+}
+

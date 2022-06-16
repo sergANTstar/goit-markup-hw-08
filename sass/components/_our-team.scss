@@ -1,0 +1,96 @@
+@import "../untils/mixin";
+@import "../untils/vars";
+
+
+.our-team {
+    background-color: #F5F4FA;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.our-team__headeline {
+    font-weight: 700;
+    font-size:36px ;
+    text-align: center;
+}
+
+.our-team__block{
+    display: flex;
+    margin-top: 50px;
+}
+
+.our-team__card {
+    width: 270px;
+    background-color: $backround-color;
+    border-radius: 4px;
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2),
+    0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12);
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+.our-team__command {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+.our-team__name {
+    font-weight: 500;
+    font-size:16px;
+    text-align: center;
+}
+
+.our-team__position {
+    margin-top: 10px;
+
+    font-size:16px ;
+    color: #757575;
+    text-align: center;
+}
+
+.our-team__social-networks--block {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 16px;
+    padding-right: 32px;
+    padding-left: 32px;
+}
+
+.our-team__social-networks--item{
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+
+.our-team__social-networks--icon-background {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    color: #AFB1B8;
+    border-radius: 50%;
+    background-color: $backround-color;
+
+    transition-property: color, background-color,  box-shadow ;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 250ms;
+
+    &:hover, &:focus {
+    background-color: $accent-color;
+    color: $backround-color;
+}
+}
+
+.our-team__social-networks--icon {
+    fill: currentColor;
+   }
+
+
