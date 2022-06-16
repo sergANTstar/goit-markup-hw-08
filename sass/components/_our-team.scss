@@ -48,12 +48,10 @@
     box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2),
     0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 1px 3px 0 rgba(0, 0, 0, 0.12);
-
-    @media screen and (min-width: 480px) {
+    
     &:not(:last-child) {
         margin-bottom: 30px;
     }
-}
 
     @media screen and (min-width: 768px) {
         width: 354px;
@@ -75,6 +73,7 @@
     width: 270px;
     &:not(:last-child) {
         margin-right: 30px;
+        margin-bottom: 0px;
     }
    
 }

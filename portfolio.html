@@ -15,40 +15,97 @@
                 <div class="header-block list">
                     <div>
                         <a href="./index.html" lang="en" class="header-block__logo--black"><span class="header-block__logo--blue">Web</span>Studio</a>
-                    </div>                           
-                    <nav>
-                        <ul class="site-nav list">
-                            <li class="site-nav__item">
-                                <div clas="p">
-                                    <a href="./index.html" class="site-nav__link">Студія</a>
-                                </div>
+                    </div>     
+                    <button
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="mobile-site-nav"
+                        class="mobail-buton-menue"
+                        data-menu-button
+                        >
+                        <svg class="mobail-buton-menue__icon" width="40" height="40" aria-label="Перемикач мобільного меню">
+                            <use class="mobail-buton-menue__icon--close" href="./images/sprite.svg#icon-close-menu"></use>
+                            <use class="mobail-buton-menue__icon--menu" href="./images/sprite.svg#icon-menu"></use>
+                        </svg>
+                    </button> 
+                    <div class="mobile-site-nav mobile-container" id="mobile-site-nav" data-menu>
+                        <svg class="mobail-buton-menue__icon" width="40" height="40" aria-label="Перемикач мобільного меню">
+                            <use class="mobail-buton-menue__icon--close" href="./images/sprite.svg#icon-close-menu"></use>
+                        </svg>
+                        <nav>
+                            <ul class="list">
+                                <li class="mobile-site-nav__item">
+                                    <a href="./index.html" class="mobile-site-nav__link">Студія</a>
+                                </li>
+                                <li class="mobile-site-nav__item">
+                                    <a href="./portfolio.html" class="mobile-site-nav__link--main">Портфоліо</a>
+                                </li>
+                                <li class="mobile-site-nav__item">
+                                    <a href="./index.html"  class="mobile-site-nav__link">Контакти</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <ul class="mobail-header-block__contacts list">
+                            <li class="mobail-header-block__contacts--item">
+                                <a href="tel:+380961111111" class="mobile-header-block__contacts--phone">
+                                    +38 096 111 11 11
+                                </a>
                             </li>
-                            <li class="site-nav__item">
-                                <a href="./portfolio.html" class="site-nav__link site-nav__link--main">Портфоліо</a>
-                            </li>
-                            <li class="site-nav__item">
-                                <a href="./index.html" class="site-nav__link">Контакти</a>
+                            <li class="mobile-header-block__contacts--item">
+                                <a href="mailto:info@devstudio.com" class="mobile-header-block__contacts--mail">
+                                    info@devstudio.com
+                                </a>
                             </li>
                         </ul>
-                    </nav>
-                    <ul class="header-block__contacts list">
-                        <li class="header-block__contacts--item">
-                            <a href="mailto:info@devstudio.com" class="header-block__contacts--link">
-                                <svg class="header-block__contacts--icon" width="16" height="12">
-                                    <use xlink:href="./images/sprite.svg#icon-mail"></use>
-                                </svg>
-                                <p>info@devstudio.com</p>
-                            </a>
-                        </li>
-                        <li class="header-block__contacts--item">
-                            <a href="tel:+380961111111" class="header-block__contacts--link">
-                                <svg class="header-block__contacts--icon" width="10" height="16">
-                                    <use xlink:href="./images/sprite.svg#icon-phone"></use>
-                                </svg>
-                                <p>+38 096 111 11 11</p>
-                            </a>
-                        </li>
-                    </ul>
+                        <ul class=" mobile-social-networks list" >
+                            <li class="mobile-social-networks__item">
+                                <a href=".https://www.instagram.com/" class="mobile-social-networks__item--text" lang="en">Instagram</a>
+                            </li>
+                            <li class="mobile-social-networks__item">
+                                <a href="https://twitter.com/" class="mobile-social-networks__item--text" lang="en">Twitter</a>
+                            </li>
+                            <li class="mobile-social-networks__item">
+                                <a href="https://www.facebook.com/" class="mobile-social-networks__item--text" lang="en">Facebook</a>
+                            </li>
+                            <li class="mobile-social-networks__item">
+                                <a href="https://www.linkedin.com/" class="mobile-social-networks__item--text" lang="en">LinkedIn</a>
+                            </li>
+                          
+                        </ul>
+                    </div>
+                    <div class="header-block__site-nav">                   
+                        <nav>
+                            <ul class="site-nav list">
+                                <li class="site-nav__item">
+                                    <a href="./index.html" class="site-nav__link">Студія</a>
+                                </li>
+                                <li class="site-nav__item">
+                                    <a href="./portfolio.html" class="site-nav__link site-nav__link--main">Портфоліо</a>
+                                </li>
+                                <li class="site-nav__item">
+                                    <a href="./index.html" class="site-nav__link">Контакти</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <ul class="header-block__contacts list">
+                            <li class="header-block__contacts--item">
+                                <a href="mailto:info@devstudio.com" class="header-block__contacts--link">
+                                    <svg class="header-block__contacts--icon" width="16" height="12">
+                                        <use xlink:href="./images/sprite.svg#icon-mail"></use>
+                                    </svg>
+                                    <p>info@devstudio.com</p>
+                                </a>
+                            </li>
+                            <li class="header-block__contacts--item">
+                                <a href="tel:+380961111111" class="header-block__contacts--link">
+                                    <svg class="header-block__contacts--icon" width="10" height="16">
+                                        <use xlink:href="./images/sprite.svg#icon-phone"></use>
+                                    </svg>
+                                    <p>+38 096 111 11 11</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>  
                 </div>
             </div>
         </div>
@@ -76,7 +133,7 @@
                 <ul class="portfolio__item--block list">
                     <li class="portfolio__item">
                         <div class="portfolio__image">
-                            <img src="./images/technocrat.jpg" width="370" alt="Технокряк" class="img">
+                            <img src="./images/technocrat.jpg"  alt="Технокряк" class="portfolio__foto">
                             <p class="portfolio__hiden">
                                  Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію або приватну особу.
                             </p>
@@ -88,19 +145,19 @@
                     </li>
                     <li class="portfolio__item">
                         <div class="portfolio__image">
-                            <img src="./images/postergame.jpg" width="370" alt="Постер New Orlean vs Golden Star" class="img">
+                            <img src="./images/postergame.jpg" alt="Постер New Orlean vs Golden Star" class="portfolio__foto">
                             <p class="portfolio__hiden">
                                  Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію або приватну особу.
                             </p>
                         </div>
                             <div class="portfolio__text">
-                                <h3 class="portfolio__name">Постер<span lang="en">New Orlean vs Golden Star</span></h3>
+                                <h3 class="portfolio__name">Постер<span lang="en">New Orlean vs Golden <br/> Star</span></h3>
                                 <p class="portfolio__title">Дизайн</p>
                             </div>
                     </li>
                     <li class="portfolio__item">
                         <div class="portfolio__image">
-                            <img src="./images/seafood.jpg" width="370" alt="Ресторан Seafood" class="img">
+                            <img src="./images/seafood.jpg" alt="Ресторан Seafood" class="portfolio__foto">
                             <p class="portfolio__hiden">
                                  Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію або приватну особу.
                             </p>
@@ -113,7 +170,7 @@
                     <li class="portfolio__item">
                         <div class="portfolio__image">
                             <div class="img-portfolio">
-                                <img src="./images/prime.jpg" width="370" alt="Проект Prime" class="img">
+                                <img src="./images/prime.jpg" alt="Проект Prime" class="portfolio__foto">
                                 <p class="portfolio__hiden">
                                      Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію або приватну особу.
                                 </p>
@@ -126,7 +183,7 @@
                     </li>
                     <li class="portfolio__item">
                         <div class="portfolio__image">
-                            <img src="./images/boxes.jpg" width="370" alt="Проект Boxes" class="img">
+                            <img src="./images/boxes.jpg" alt="Проект Boxes" class="portfolio__foto">
                             <p class="portfolio__hiden">
                                  Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію або приватну особу.
                             </p>
@@ -138,7 +195,7 @@
                     </li>
                     <li class="portfolio__item">
                         <div class="portfolio__image">
-                            <img src="./images/inspiration.jpg" width="370" alt="Inspiration has no Borders" class="img">
+                            <img src="./images/inspiration.jpg" alt="Inspiration has no Borders" class="portfolio__foto">
                             <p class="portfolio__hiden">
                                  Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію або приватну особу.
                             </p>
@@ -150,7 +207,7 @@
                     </li>
                     <li class="portfolio__item">
                         <div class="portfolio__image">
-                            <img src="./images/limited.jpg" width="370" alt="Видавництво Limited Edition" class="img">
+                            <img src="./images/limited.jpg" alt="Видавництво Limited Edition" class="portfolio__foto">
                             <p class="portfolio__hiden">
                                  Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію або приватну особу.
                             </p>
@@ -162,7 +219,7 @@
                     </li>
                     <li class="portfolio__item">
                         <div class="portfolio__image">
-                            <img src="./images/lab.jpg" width="370" alt="Проект LAB" class="img">
+                            <img src="./images/lab.jpg" alt="Проект LAB" class="portfolio__foto">
                             <p class="portfolio__hiden">
                                  Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію або приватну особу.
                             </p>
@@ -174,7 +231,7 @@
                     </li>
                     <li class="portfolio__item">
                         <div class="portfolio__image">
-                            <img src="./images/growing.jpg" width="370" alt="Growing Business" class="img">
+                            <img src="./images/growing.jpg" alt="Growing Business" class="portfolio__foto">
                             <p class="portfolio__hiden">
                                  Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію або приватну особу.
                             </p>
@@ -254,5 +311,6 @@
                 </div>
             </div>
     </footer>
+    <script src="./js/mobile.js"></script>
 </body>
 </html>
