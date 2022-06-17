@@ -343,6 +343,12 @@ img {
   height: auto;
 }
 
+.portfolio__hiden {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .header {
   position: fixed;
   -webkit-box-align: center;
@@ -1035,6 +1041,12 @@ img {
   }
 }
 
+.advantages-block {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 @media screen and (min-width: 768px) {
   .advantages-block {
     display: -webkit-box;
@@ -1183,6 +1195,7 @@ img {
 }
 
 .our-team {
+  min-width: 480px;
   background-color: #F5F4FA;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -1392,11 +1405,15 @@ img {
 }
 
 .companies__block {
+  min-width: 480px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 30px;
 }
 
@@ -1497,6 +1514,7 @@ img {
 }
 
 .footer {
+  min-width: 480px;
   background-color: #2F303A;
   line-height: 1.71;
   color: var(--backround-color);
