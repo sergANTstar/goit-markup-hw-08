@@ -3,6 +3,9 @@
 
 .header{
     position: fixed;
+    display: flex;
+    justify-items: space-around;
+    align-items: center;
     width: 100%;
     height: 80px;
     top: 0;
@@ -13,6 +16,7 @@
 }
 
 .header-block{
+    height: 80px;
     @include centeredFlex (inline-flex);
     width: 450px;
     }
