@@ -25,7 +25,7 @@
 
     @media screen and (min-width: 1200px) {
       
-        justify-content: flex-start;
+        justify-content: center;
         align-items: flex-start;
     
         }
@@ -47,6 +47,7 @@
         }
     }
     @media screen and (min-width: 1200px) {
+        align-items: flex-start;
 
         &:first-child {
             margin-right: 70px;
@@ -112,6 +113,7 @@
 
 .footer__header {
     font-weight: 700;
+    text-align: start;
     text-transform: uppercase;
     color: $backround-color ;
 
