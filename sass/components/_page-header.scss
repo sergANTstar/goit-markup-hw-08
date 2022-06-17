@@ -3,8 +3,6 @@
 
 .header{
     position: fixed;
-    display: flex;
-    justify-items: space-around;
     align-items: center;
     width: 100%;
     height: 80px;
@@ -16,9 +14,15 @@
 }
 
 .header-block{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 80px;
-    @include centeredFlex (inline-flex);
-    width: 450px;
+
+    @media screen and (mix-width: 768px) {
+        justify-content: flex-start;
+    }
     }
 
 .header-block__site-nav{
@@ -106,7 +110,7 @@
 .header-block__contacts {
 
     @media screen and (min-width: 768px) {
-    margin-left: 94px;
+    margin-left: 84px;
     @include centeredFlex (flex);
     flex-wrap: wrap;
     }
@@ -143,12 +147,17 @@
 
 .header-block__contacts--link {
     display: inline-flex;
+    align-items: center;
     color: $second-text-color;
 
 
     &:hover, &:focus {
         color: $accent-color;
         fill: $accent-color ;
+
+        @media screen and (min-width: 1200px) {
+           font-size: 12px;
+        }
     }
 
     font-weight: 500;
@@ -163,5 +172,11 @@
 .header-block__contacts--icon{
     fill: currentColor;
     margin-right: 10px;
+}
+
+.header-block__contacts--text {
+    @media screen and (max-width: 1199px) {
+        font-size: 12px;
+     }
 }
 

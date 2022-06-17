@@ -339,10 +339,6 @@ address {
 
 .header {
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-items: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -356,17 +352,24 @@ address {
 }
 
 .header-block {
-  height: 80px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  width: 450px;
+  height: 80px;
+}
+
+@media screen and (mix-width: 768px) {
+  .header-block {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -481,7 +484,7 @@ address {
 
 @media screen and (min-width: 768px) {
   .header-block__contacts {
-    margin-left: 94px;
+    margin-left: 84px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -542,6 +545,9 @@ address {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #757575;
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -560,9 +566,21 @@ address {
   fill: #2196F3;
 }
 
+@media screen and (min-width: 1200px) {
+  .header-block__contacts--link:hover, .header-block__contacts--link:focus {
+    font-size: 12px;
+  }
+}
+
 .header-block__contacts--icon {
   fill: currentColor;
   margin-right: 10px;
+}
+
+@media screen and (max-width: 1199px) {
+  .header-block__contacts--text {
+    font-size: 12px;
+  }
 }
 
 .hero {
@@ -2066,7 +2084,6 @@ address {
   fill: #212121;
   z-index: 1;
   color: #212121;
-  overflow-y: scroll;
 }
 
 @media screen and (min-width: 768px) {
@@ -2102,6 +2119,7 @@ address {
 
 .mobail-buton-menue.is-open .mobail-buton-menue__icon--close {
   display: block;
+  overflow-y: scroll;
   z-index: 2;
 }
 

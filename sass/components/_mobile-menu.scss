@@ -16,7 +16,6 @@
     fill: $main-text-color;
     z-index: 1;
     color: $main-text-color;
-    overflow-y: scroll;
     @media screen and (min-width: 768px) {
         display:none;
     }
@@ -45,6 +44,7 @@
 
 .mobail-buton-menue.is-open .mobail-buton-menue__icon--close {
 display: block;
+overflow-y: scroll;
 z-index: 2;
 }
 
