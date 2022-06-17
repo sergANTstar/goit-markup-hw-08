@@ -1417,9 +1417,6 @@ address {
   .companies__item:nth-child(2n) {
     margin-right: 0px;
   }
-  .companies__item:nth-last-child(-n+2) {
-    margin-bottom: 0px;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1831,10 +1828,9 @@ address {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: baseline;
-      -ms-flex-pack: baseline;
-          justify-content: baseline;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 @media screen and (min-width: 768px) {
@@ -1855,7 +1851,7 @@ address {
   margin-right: 8px;
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .portfolio__button--item:nth-child(3) {
     margin-right: 80px;
   }
@@ -1953,13 +1949,13 @@ address {
           transform: translateY(0%);
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .portfolio__item:not(:last-child) {
     margin-bottom: 30px;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .portfolio__item:nth-child(2n) {
     margin-right: 0px;
   }
@@ -2043,7 +2039,7 @@ address {
           transition-delay: 250ms;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .portfolio__hiden {
     padding: 49px 24px 77px 24px;
   }
