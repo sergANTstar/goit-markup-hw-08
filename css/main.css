@@ -740,6 +740,7 @@ img {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   padding: 0;
+  overflow: scroll;
   height: 581px;
   width: 528px;
   border-radius: 4px;
