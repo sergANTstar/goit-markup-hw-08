@@ -1,10 +1,6 @@
 @import "../untils/mixin";
 @import "../untils/vars";
 
-.header-block {
-    position: relative;
-    
-}
 
 
 .mobail-buton-menue {
@@ -51,38 +47,33 @@ z-index: 2;
     display: none;
     }
 
-.mobile-container{
-    min-width: 480px;
-    padding-right: 40px;
-    padding-left: 40px;
-    margin-left: auto;
-    margin-right: auto;
-  
-}
-
 .mobile-site-nav {
+    width: 800px;
     display: none;
-    padding: auto;
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 8px;
+    padding-left: 40px;
     transform: translateY(-80px);
     position: absolute;
-    background-color: $backround-color;
+    background-color: rosybrown;
     top: 100%;
-    left: 0;
+    right: 0;
     font-weight: 500;
     line-height: 1.17;
     letter-spacing: 0.02em;
     color: $main-text-color;
-    overflow: scroll;
+    overflow-y: scroll;
    
     &.is-open {
         display: block;
+        width: 480px;
+       
     }
-   
-    
 
+}
 
+.mobile-container {
+  
+    overflow: scroll;
 }
 
 .mobile-site-nav__item {
