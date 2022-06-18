@@ -10,7 +10,7 @@
   background-position: 50% 50%;
 
    
-    width: 480px;
+    width: 478px;
     height: 400px;
     background-image: linear-gradient(
       to right,
@@ -93,13 +93,14 @@
     color: $backround-color;
     font-weight: 900;
     font-size: 26px;
-    line-height: 1.36;
+    line-height: 1.62;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.06em;
 
     @media screen and (min-width: 1200px) {
       font-size: 44px;
+      line-height: 1.36;
     }
   
 }

@@ -4,6 +4,7 @@
 
 
 .mobail-buton-menue {
+    position: relative;
     display: block;
     width: 40px;
     height: 40px;
@@ -47,33 +48,31 @@ z-index: 2;
     display: none;
     }
 
+.mobile-backround{
+    width: 100vw;
+    background: $backround-color;
+}
 .mobile-site-nav {
-    width: 800px;
     display: none;
     padding-top: 8px;
     padding-left: 40px;
-    transform: translateY(-80px);
-    position: absolute;
-    background-color: rosybrown;
-    top: 100%;
+    padding-bottom: 48px;
+    position: absolute;  
+    top: 0;
     right: 0;
     font-weight: 500;
     line-height: 1.17;
     letter-spacing: 0.02em;
     color: $main-text-color;
+    transform: translateX(15px);
     overflow-y: scroll;
    
     &.is-open {
         display: block;
-        width: 480px;
-       
+        width:100vw;
+        overflow: scroll;
     }
 
-}
-
-.mobile-container {
-  
-    overflow: scroll;
 }
 
 .mobile-site-nav__item {
