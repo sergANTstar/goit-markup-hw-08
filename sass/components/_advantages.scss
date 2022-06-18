@@ -84,10 +84,15 @@
 }
 
 .advantages__headline {
-    font-size:14px;
+    font-size: 14px;
     font-weight: 700;
+    text-align: center;
     text-transform: uppercase;
     margin-top: 30px;
+
+    @media screen and (min-width: 768px) {
+       text-align: start;
+    }
 }
 
 .advantages__title {

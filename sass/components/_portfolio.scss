@@ -221,6 +221,11 @@
  
  .portfolio__text {
    padding: 20px 24px 20px 24px;
+
+   @media screen   and(min-width: 768px) and(max-width: 1200px) {
+    width: 354px;
+}
+   
  }
  
  .portfolio__name {
