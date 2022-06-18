@@ -2228,7 +2228,7 @@ img {
 }
 
 .mobile-container {
-  width: 480px;
+  min-width: 480px;
   padding-right: 40px;
   padding-left: 40px;
   margin-left: auto;
@@ -2250,6 +2250,7 @@ img {
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: #212121;
+  overflow: scroll;
 }
 
 .mobile-site-nav.is-open {

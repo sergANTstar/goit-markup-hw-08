@@ -52,7 +52,7 @@ z-index: 2;
     }
 
 .mobile-container{
-    width: 480px;
+    min-width: 480px;
     padding-right: 40px;
     padding-left: 40px;
     margin-left: auto;
@@ -70,14 +70,16 @@ z-index: 2;
     background-color: $backround-color;
     top: 100%;
     left: 0;
-   
-    &.is-open {
-        display: block;
-    }
     font-weight: 500;
     line-height: 1.17;
     letter-spacing: 0.02em;
     color: $main-text-color;
+    overflow: scroll;
+   
+    &.is-open {
+        display: block;
+    }
+   
     
 
 
