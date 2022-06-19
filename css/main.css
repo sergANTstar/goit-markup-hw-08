@@ -1083,6 +1083,7 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  min-width: 480px;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -1448,6 +1449,7 @@ img {
   display: flex;
   padding-top: 60px;
   padding-bottom: 60px;
+  min-width: 480px;
 }
 
 @media screen and (min-width: 1200px) {
