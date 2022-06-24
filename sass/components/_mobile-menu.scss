@@ -50,8 +50,8 @@ position: relative;
     }
 
 .mobile-backround{
-    width: 100vw;
-    background: $backround-color;
+    min-width: 480px;
+    background-color: $backround-color;
 }
 .mobile-site-nav {
     display: none;

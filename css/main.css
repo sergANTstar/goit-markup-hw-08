@@ -2225,8 +2225,8 @@ img {
 }
 
 .mobile-backround {
-  width: 100vw;
-  background: #FFFFFF;
+  min-width: 480px;
+  background-color: #FFFFFF;
 }
 
 .mobile-site-nav {
