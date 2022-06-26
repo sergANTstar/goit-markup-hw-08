@@ -292,6 +292,10 @@ body {
 }
 
 .container {
+  margin-left: 0;
+}
+
+.container {
   width: 480px;
   padding-right: 15px;
   padding-left: 15px;
@@ -378,7 +382,7 @@ img {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    min-width: 480px;
+    width: 480px;
   }
 }
 
@@ -599,7 +603,7 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-  width: 478px;
+  width: 480px;
   height: 400px;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/main-m.jpg");
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/main-m.jpg");
@@ -2174,8 +2178,7 @@ img {
 .mobail-buton-menue {
   position: relative;
   display: block;
-  width: 40px;
-  height: 40px;
+  padding: 0;
   border: none;
   background-color: transparent;
   fill: #212121;
@@ -2190,10 +2193,6 @@ img {
 }
 
 .mobail-buton-menue__icon {
-  -webkit-transform: translateY(-11);
-          transform: translateY(-11);
-  -webkit-transform: translateX(-6px);
-          transform: translateX(-6px);
   cursor: pointer;
 }
 
@@ -2226,7 +2225,7 @@ img {
 
 .mobile-backround {
   min-width: 480px;
-  background-color: #FFFFFF;
+  background: #FFFFFF;
 }
 
 .mobile-site-nav {
