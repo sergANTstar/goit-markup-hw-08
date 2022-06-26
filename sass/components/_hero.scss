@@ -6,6 +6,7 @@
 
 .hero {
   max-width: 1600px;
+  min-width: 480px;
   height: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -14,13 +15,36 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url("../images/main.jpg");
+    url("/images/main.jpg");
   background-repeat: no-repeat;
 
   background-position: 50% 50%;
+  
+
+@media screen and (max-width:768px) {
+  width: 480px;
+   height: 400px;
+  background-image: linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+  ),
+  url("/images/main-m.jpg");
+  
 }
 
+@media screen and(min-width:768px) and (max-width:1200px) {
+  background-image: linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+  ),
+  url("/images/main-t.jpg");
+  width: 768px;
+  height: 400px;
+}
 
+}
 .hero-1{
   
   min-width: 480px;
