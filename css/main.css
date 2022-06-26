@@ -590,7 +590,6 @@ img {
 
 .hero {
   max-width: 1600px;
-  min-width: 480px;
   height: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -1118,7 +1117,6 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-width: 480px;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -1296,7 +1294,6 @@ img {
 }
 
 .our-team {
-  min-width: 480px;
   background-color: #F5F4FA;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -1486,7 +1483,6 @@ img {
           justify-content: center;
   padding-top: 60px;
   padding-bottom: 60px;
-  min-width: 480px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1617,7 +1613,6 @@ img {
 }
 
 .footer {
-  min-width: 480px;
   background-color: #2F303A;
   line-height: 1.71;
   color: var(--backround-color);
@@ -2259,16 +2254,18 @@ img {
 }
 
 .mobile-backround {
-  min-width: 480px;
   background: #FFFFFF;
 }
 
 .mobile-site-nav {
   display: none;
+  width: 1600px;
   padding-top: 8px;
-  padding-left: 40px;
+  padding-left: 55px;
+  padding-bottom: 500px;
   position: absolute;
   top: 0;
+  left: -15px;
   font-weight: 500;
   line-height: 1.17;
   letter-spacing: 0.02em;
