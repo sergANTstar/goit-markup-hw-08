@@ -4,29 +4,24 @@
 .header{
     position: fixed;
     align-items: center;
-    justify-content: flex-start;
-    width: 100%;
+    width: 100vw;
+    min-width: 480px;
     height: 80px;
     top: 0;
-    left: 0;
     outline: 1px solid #ECECEC;
     background-color: $backround-color;
     z-index: 1;
 }
 
+
 .header-block{
     display: flex;
-    
     justify-content: space-between;
     align-items: center;
     height: 80px;
 
-
-    
-
     @media screen and (min-width: 768px) {
         justify-content: flex-start;
-        width: 480px;
     }
     }
 
@@ -161,7 +156,7 @@
         fill: $accent-color ;
 
         @media screen and (min-width: 1200px) {
-           font-size: 12px;
+           font-size: 14px;
         }
     }
 

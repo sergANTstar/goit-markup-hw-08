@@ -9,8 +9,8 @@ Use a better box model (opinionated).
 *,
 ::before,
 ::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 /**
@@ -292,10 +292,6 @@ body {
 }
 
 .container {
-  margin-left: 0;
-}
-
-.container {
   width: 480px;
   padding-right: 15px;
   padding-left: 15px;
@@ -352,13 +348,10 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  width: 100%;
+  width: 100vw;
+  min-width: 480px;
   height: 80px;
   top: 0;
-  left: 0;
   outline: 1px solid #ECECEC;
   background-color: #FFFFFF;
   z-index: 1;
@@ -382,7 +375,6 @@ img {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    width: 480px;
   }
 }
 
@@ -582,7 +574,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .header-block__contacts--link:hover, .header-block__contacts--link:focus {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -610,7 +602,7 @@ img {
 }
 
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .hero .hero {
+  .hero {
     background-image: url("../images/main-m2.jpg");
   }
 }
@@ -625,7 +617,7 @@ img {
 }
 
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
-  .hero .hero {
+  .hero {
     background-image: url("../images/main-t2.jpg");
   }
 }
@@ -640,7 +632,7 @@ img {
 }
 
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
-  .hero .hero {
+  .hero {
     background-image: url("../images/main2.jpg");
   }
 }
@@ -1454,6 +1446,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-top: 60px;
   padding-bottom: 60px;
   min-width: 480px;
@@ -2184,6 +2179,7 @@ img {
   fill: #212121;
   z-index: 1;
   color: #212121;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
