@@ -589,7 +589,6 @@ img {
 }
 
 .hero {
-  display: none;
   height: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -601,7 +600,6 @@ img {
 
 @media screen and (max-width: 768px) {
   .hero {
-    max-width: 480px;
     height: 400px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/main-m.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/main-m.jpg");
@@ -1909,6 +1907,9 @@ img {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  row-gap: 8px;
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1925,28 +1926,11 @@ img {
           justify-content: center;
 }
 
-.portfolio__button--item:not(:last-child) {
-  margin-right: 8px;
-}
-
-@media screen and (max-width: 767px) {
-  .portfolio__button--item:nth-child(3) {
-    margin-right: 80px;
-  }
-  .portfolio__button--item:nth-last-child(-n+2) {
-    margin-top: 15px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .portfolio__button--item {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-bottom: 0px;
-  }
-  .portfolio__button--item:nth-child(3) {
-    margin-right: 8px;
   }
 }
 
