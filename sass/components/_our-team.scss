@@ -74,15 +74,8 @@
    
 }
 }
-
-.our-team__img {
-    max-width: 450px;
-    @media screen and (min-width: 768px) {
-        max-width: 354px;
-}
-@media screen and (min-width: 1200px) {
-    max-width: 270px;
-}
+.container .none {
+    
 }
 
 .our-team__command {
@@ -107,11 +100,9 @@
 
 .our-team__social-networks--block {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     margin-top: 16px;
-    padding-right: 32px;
-    padding-left: 32px;
+
 }
 
 .our-team__social-networks--item{

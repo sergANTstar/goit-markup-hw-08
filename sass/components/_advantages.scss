@@ -28,7 +28,7 @@
 }
 
 .advantages__item {
-    width: 450px;
+    max-width: 450px;
     &:not(:last-child) {
         margin-bottom: 30px;
     }
@@ -60,7 +60,7 @@
 .advantages__icon {
     @include centeredFlex (flex, center);
     flex-wrap: wrap;
-    width: 450px;
+    max-width: 450px;
     height: 120px;
     background-color: rgba(245, 244, 250, 1) ;
     border-radius: 4px;
