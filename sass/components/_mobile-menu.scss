@@ -53,12 +53,13 @@ position: relative;
 }
 .mobile-site-nav {
     display: none;
-    width: 1600px;
+    min-width: 768px;
     padding-top: 48px;
     padding-left: 55px;
     padding-bottom: 500px;
     position: absolute;
     top: 0;
+    left: -15px;
     font-weight: 500;
     line-height: 1.17;
     letter-spacing: 0.02em;

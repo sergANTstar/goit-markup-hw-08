@@ -3,3 +3,15 @@
     align-items: center;
     justify-content:$type2 ;
 }
+
+@mixin medium {
+    @media (min-width: 768px){
+        @content;
+    }
+}
+
+@mixin large {
+    @media (min-width: 1200px){
+        @content;
+    }
+}
