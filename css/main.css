@@ -1873,7 +1873,6 @@ img {
 @media screen and (max-width: 768px) {
   .footer__maling--input {
     width: calc(100vw - 30px);
-    max-width: 450px;
     margin-left: 15px;
     margin-right: 15px;
   }
