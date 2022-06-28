@@ -1860,10 +1860,6 @@ img {
 }
 
 .footer__maling--input {
-  width: calc(100vw - 30px);
-  max-width: 450px;
-  margin-left: 15px;
-  margin-right: 15px;
   height: 50px;
   color: #FFFFFF;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1872,6 +1868,15 @@ img {
           box-shadow: 0 2px 1px 0 rgba(0, 4, 4, 0.15);
   background-color: #2f303a;
   padding-left: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__maling--input {
+    width: calc(100vw - 30px);
+    max-width: 450px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
