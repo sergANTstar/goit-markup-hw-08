@@ -22,7 +22,8 @@
 }
 
 .our-team__block{
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 30px;
     justify-content: center;
     
@@ -41,6 +42,7 @@
 }
 
 .our-team__card {
+    max-width: 450px;
     background-color: $backround-color;
     border-radius: 4px;
     box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2),
@@ -73,9 +75,6 @@
     }
    
 }
-}
-.container .none {
-    
 }
 
 .our-team__command {

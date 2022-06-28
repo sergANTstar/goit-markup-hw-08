@@ -348,6 +348,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
   height: 80px;
   top: 0;
   outline: 1px solid #ECECEC;
@@ -365,7 +366,6 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100vw;
   height: 80px;
 }
 
@@ -600,6 +600,7 @@ img {
 
 @media screen and (max-width: 768px) {
   .hero {
+    max-width: 450px;
     height: 400px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/main-m.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/main-m.jpg");
@@ -1317,7 +1318,11 @@ img {
 }
 
 .our-team__block {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1346,6 +1351,7 @@ img {
 }
 
 .our-team__card {
+  max-width: 450px;
   background-color: #FFFFFF;
   border-radius: 4px;
   -webkit-box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
@@ -1907,9 +1913,9 @@ img {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  row-gap: 8px;
-  -webkit-column-gap: 15px;
-          column-gap: 15px;
+  row-gap: 15px;
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
 }
 
 @media screen and (min-width: 768px) {
