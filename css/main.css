@@ -348,8 +348,6 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  min-width: 480px;
   height: 80px;
   top: 0;
   outline: 1px solid #ECECEC;
