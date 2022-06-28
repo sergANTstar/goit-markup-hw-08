@@ -1364,6 +1364,7 @@ img {
 
 @media screen and (min-width: 768px) {
   .our-team__card {
+    width: 354px;
     margin-right: 30px;
     margin-bottom: 30px;
   }
@@ -1376,6 +1377,9 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
+  .our-team__card {
+    max-width: 270px;
+  }
   .our-team__card:not(:last-child) {
     margin-right: 30px;
     margin-bottom: 0px;
