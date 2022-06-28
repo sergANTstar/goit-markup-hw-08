@@ -1,239 +1,182 @@
 @import "../untils/mixin";
 @import "../untils/vars";
 
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-button {
-    padding: 0;
-    background-color: transparent;
-    border: none;
-}
-
-.header {
-    padding: 0 15px;
-
-    height: 80px;
-    width: 100%;
-
+.header{
     position: fixed;
+    align-items: center;
+    width: 100%;
+    min-width: 480px;
+    height: 80px;
     top: 0;
-    z-index: 1;
-
-    display: flex; // new
-    justify-content: space-between; //new
-    align-items: center; // was no flex, why this prop?
-
-    background-color: $backround-color;
     outline: 1px solid #ECECEC;
+    background-color: $backround-color;
+    z-index: 1;
+}
 
-    &__menu--desktop, &__menu--mobile {
+
+.header-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+
+    @media screen and (min-width: 768px) {
+        justify-content: flex-start;
+    }
+    }
+
+.header-block__site-nav{
+    @media screen and (max-width: 767px) {
         display: none;
     }
+}
 
-    &__navbar {
-        max-width: 1200px;
-        max-width: 1200px;
-        @include medium {
-            margin-left: 88px;
-            flex: 1 1 auto;
-        }
-        @include large {
-            margin-left: 93px;
-        }
+.header-block__logo--black {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px ;
+    color: $main-text-color;
+}
+
+.header-block__logo--blue {
+    color: $accent-color;
+}
+
+.header-block__site-nav {
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+       display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+        margin-left: 88px;
+        display: inline-flex;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: inline-flex;
+        margin-left: 93px;
     }
 }
 
-.logo {
-    font-family: 'Raleway', sans-serif;
-    font-size: 26px;
-    font-weight: 700;
+.site-nav {
+    @include centeredFlex (inline-flex);
+    
+}
 
-    &--black {
-        color: $main-text-color;
+.site-nav__item {
+    @include centeredFlex (inline-flex);
+    cursor: pointer;
+    
+    &:not(:last-child) {
+    margin-right: 50px;
     }
-    &--blue {
+}
+
+.site-nav__link {
+    display: block;
+    position: relative;
+    color: $main-text-color;
+
+    &:focus, &:hover {
         color: $accent-color;
     }
+
+    font-weight: 500;
+    letter-spacing: 0.02em; 
+    
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 250ms;
 }
 
-.burger {
-    position: absolute;
-    right: 15px;
-    z-index: 1;
-
-    cursor: pointer;
-    fill: $main-text-color;
-    @include medium {
-        display: none;
-    }
-
-    &__close {
-        display: none;
-        fill: $main-text-color;
-
-        transition-property: fill;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        //transition-delay: 250ms;
-
-        &:hover, &:focus {
-            fill: $accent-color;
-        }
-    }
-
-    &.is-open {
-        & .burger__close {
-            display: block;
-        }
-        & .burger__menu {
-            display: none;
-        }
+.site-nav__link--main {
+    margin-top: 32px;
+    &::after {
+        content: '';
+          
+        margin-top: 28px;
+    
+        display: block;
+        width: 100%;
+        height: 4px;
+        border-radius: 4px;
+        background-color: $accent-color;
     }
 }
 
-.navbar {
-    padding: 48px 0 48px 55px;
+.header-block__contacts {
 
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-
-    background-color: white;
-    transform: translateX(100%);
-    transition: 0.5s;
-
-    @include medium {
-        padding: 0;
-        height: 100%;
-        position: initial;
-
-        flex-direction: row;
-        justify-content: space-between;
-        transform: translateX(0);
-    }
-
-    &.is-open {
-        transform: translateX(0);
-    }
-
-    &__contacts {
-        margin-top: auto;
-        @include medium {
-            margin-top: 0;
-        }
-    }
-    &__social {
-        margin-top: 64px;
-        @include medium {
-            margin-top: 0;
-        }
-    }
-}
-
-.menu {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-
-    @include medium {
-        flex-direction: row;
-        align-items: center;
-        gap: 50px;
-    }
-
-    &__link {
-        color: #212121;
-        font-size: 40px;
-        font-weight: 500;
-        line-height: 1.17;
-        letter-spacing: 0.02em;
-        &--active {
-            color: #2196F3;
-        }
-        @include medium {
-            font-size: 14px;
-        }
-    }
-}
-
-.contacts {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-
-    @include medium {
-        gap: 10px;
-        justify-content: center;
-    }
-
-    @include large {
-        gap: 30px;
-        flex-direction: row;
-        align-items: center;
-    }
-
-    &__icon {
-        display: none;
-        @include medium {
-            display: initial;
-        }
-    }
-
-    &__link {
-        font-weight: 500;
-        line-height: 1.17;
-        letter-spacing: 0.02em;
-        &--accent {
-            color: #2196F3;
-            font-size: 34px;
-        }
-
-        &--basic {
-            color: #757575;
-            font-size: 24px;
-        }
-        @include medium {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-
-            color: #757575;
-            font-size: 12px;
-        }
-    }
-}
-
-.social {
-    display: flex;
+    @media screen and (min-width: 768px) {
+    margin-left: 84px;
+    @include centeredFlex (flex);
     flex-wrap: wrap;
-
-    @include medium {
-        display: none;
-    }
-    &__item {
-        &:not(:last-child) {
-            padding-right: 10px;
-            border-right: 1px solid rgba(33, 33, 33, 0.2);
-        }
-        &:not(:first-child) {
-            padding-left: 10px;
-        }
     }
 
-    &__link {
-        color: #2196F3;
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 1.17;
-        letter-spacing: 0.02em;
+    @media screen and (min-width: 1200px) {
+        width: 333px;
+        display: flex;
+        margin-left: 305px;
+        
     }
 }
+
+.header-block__contacts--item{
+
+    @media screen and (min-width:768px){
+        @include centeredFlex (inline-flex);
+        &:first-child {
+            margin-bottom: 10px;
+        }
+    
+    }
+    @media screen and (min-width: 1200px){
+        &:first-child {
+            margin-bottom: 0px;
+        }
+    margin-bottom: 0;
+        &:not(:first-child) {
+            margin-left: 30px;
+            display: inline-flex;
+            
+        }
+    }
+}
+
+.header-block__contacts--link {
+    display: inline-flex;
+    align-items: center;
+    color: $second-text-color;
+
+
+    &:hover, &:focus {
+        color: $accent-color;
+        fill: $accent-color ;
+
+        @media screen and (min-width: 1200px) {
+           font-size: 14px;
+        }
+    }
+
+    font-weight: 500;
+    letter-spacing: 0.02em;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 250ms;
+}
+
+.header-block__contacts--icon{
+    fill: currentColor;
+    margin-right: 10px;
+}
+
+.header-block__contacts--text {
+    @media screen and (max-width: 1200px) {
+        font-size: 12px;
+     }
+}
+
