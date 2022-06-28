@@ -2055,7 +2055,7 @@ img {
 .portfolio__image {
   position: relative;
   overflow: hidden;
-  width: 450px;
+  max-width: 450px;
 }
 
 @media screen and (min-width: 768px) {
@@ -2071,7 +2071,7 @@ img {
 }
 
 .portfolio__foto {
-  width: 450px;
+  max-width: 450px;
 }
 
 @media screen and (min-width: 768px) {
