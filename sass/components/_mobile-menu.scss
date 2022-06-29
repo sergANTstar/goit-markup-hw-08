@@ -47,10 +47,7 @@ position: relative;
     display: none;
     }
 
-.mobile-backround{
-    background: $backround-color;
 
-}
 .mobile-site-nav {
     display: none;
     height: 100vh;
@@ -65,15 +62,27 @@ position: relative;
     line-height: 1.17;
     letter-spacing: 0.02em;
     color: $main-text-color;
-    overflow-y: scroll;
+
     
    
     &.is-open {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @media screen and (min-width: 768px) {
+            display: none;
        
     }
 
+    }
+
 }
+
+.mobile-backround{
+    background: $backround-color;
+
+}
+
 
 .mobile-site-nav__item {
     font-size: 40px;
@@ -92,7 +101,7 @@ position: relative;
 
 
 .mobail-header-block__contacts{
-    margin-top: 302px;
+    
 }
 
 .mobile-header-block__contacts--item {
