@@ -765,7 +765,6 @@ img {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   padding: 0;
-  overflow: scroll;
   height: 609px;
   width: 450px;
   border-radius: 4px;
@@ -900,6 +899,12 @@ img {
           transition-delay: 250ms;
 }
 
+@media screen and (min-width: 1200px) {
+  .order-form__field:not(:last-child) input {
+    width: 448px;
+  }
+}
+
 .order-form__field:hover:not(:last-child) input,
 .order-form__field:hover textarea,
 .order-form__field:focus:not(:last-child) input,
@@ -910,13 +915,6 @@ img {
 .order-form__field:hover input ~ .order-form__field--icon,
 .order-form__field:focus input ~ .order-form__field--icon {
   fill: #2196F3;
-}
-
-@media screen and (min-width: 1200px) {
-  .order-form__field:hover input ~ .order-form__field--icon,
-  .order-form__field:focus input ~ .order-form__field--icon {
-    width: 448px;
-  }
 }
 
 .order-form__field textarea {
@@ -2062,7 +2060,7 @@ img {
 }
 
 .portfolio__foto {
-  max-width: 450px;
+  width: 450px;
 }
 
 @media screen and (min-width: 768px) {

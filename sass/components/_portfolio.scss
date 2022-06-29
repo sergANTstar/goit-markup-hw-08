@@ -84,6 +84,7 @@
      outline:  1px solid #EEEEEE;
      cursor: pointer;
      
+     
  
      transition-property: box-shadow;
      transition-duration: 250ms;
@@ -120,7 +121,7 @@
  
 
  .portfolio__foto {
-    max-width: 450px;
+    width: 450px;
 
     @media screen and (min-width: 768px) {
         width: 354px;
